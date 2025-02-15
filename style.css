@@ -32,9 +32,9 @@ body {
   justify-content: center;
   align-items: center;
   top: 50%;
-  left: 45%;
-  width: 250px;
+  left: 50%;
   height: 50px;
+  width: 250px;
   color: white;
   text-decoration: none;
   background-color: lightcoral;
@@ -50,15 +50,15 @@ body {
   -o-transition: all 0.3s ease;
   animation: changeColorButton 3s infinite;
   -webkit-animation: changeColorButton 3s infinite;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 .button:hover {
   background-color: lightgreen;
-  transform: translateY(-5px);
-  -webkit-transform: translateY(-5px);
-  -moz-transform: translateY(-5px);
-  -ms-transform: translateY(-5px);
-  -o-transform: translateY(-5px);
 }
 
 #panorama {
@@ -109,5 +109,13 @@ body {
   }
   100% {
     background-color: lightcoral;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
   }
 }
